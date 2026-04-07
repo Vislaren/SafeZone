@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#0A0A0A</color>
+    <string name="app_name">SafeZone</string>
+    <string name="service_notification_text">SYSTEM ARMED — Monitoring Active</string>
+    <string name="service_notification_title">SAFEZONE</string>
+    <style name="Theme.SafeZone" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

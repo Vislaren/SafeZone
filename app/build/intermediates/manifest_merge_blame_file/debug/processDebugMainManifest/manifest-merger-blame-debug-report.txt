@@ -1,0 +1,340 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.safezone.debug"
+4    android:versionCode="1"
+5    android:versionName="2.4.0-DEBUG" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- ── Core Permissions ─────────────────────────────────────────────────── -->
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:6:5-65
+12-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:6:22-62
+13    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+13-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:7:5-71
+13-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:7:22-68
+14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:8:5-79
+14-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:9:5-81
+15-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:9:22-78
+16    <uses-permission android:name="android.permission.SEND_SMS" />
+16-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:10:5-67
+16-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:10:22-64
+17    <uses-permission android:name="android.permission.READ_CONTACTS" />
+17-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:11:5-72
+17-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:11:22-69
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+18-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:12:5-75
+18-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:12:22-72
+19    <uses-permission android:name="android.permission.CALL_PHONE" />
+19-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:13:5-69
+19-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:13:22-66
+20
+21    <!-- ── Foreground Service ────────────────────────────────────────────────── -->
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:16:5-77
+22-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:16:22-74
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+23-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:17:5-88
+23-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:17:22-85
+24    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+24-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:18:5-84
+24-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:18:22-81
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+25-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:19:5-86
+25-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:19:22-83
+26
+27    <!-- ── Background & Boot ─────────────────────────────────────────────────── -->
+28    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+28-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:22:5-81
+28-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:22:22-78
+29    <uses-permission android:name="android.permission.WAKE_LOCK" />
+29-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:23:5-68
+29-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:23:22-65
+30    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+30-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:24:5-95
+30-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:24:22-92
+31    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+31-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:25:5-77
+31-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:25:22-74
+32    <uses-permission android:name="android.permission.INTERNET" />
+32-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:26:5-67
+32-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:26:22-64
+33    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+33-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:27:5-72
+33-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:27:22-69
+34    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+34-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:28:5-74
+34-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:28:22-71
+35
+36    <!-- ── Hardware Features ─────────────────────────────────────────────────── -->
+37    <uses-feature
+37-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:5-85
+38        android:name="android.hardware.camera"
+38-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:19-57
+39        android:required="false" />
+39-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:58-82
+40    <uses-feature
+40-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:5-89
+41        android:name="android.hardware.microphone"
+41-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:19-61
+42        android:required="false" />
+42-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:62-86
+43    <uses-feature
+43-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:5-91
+44        android:name="android.hardware.location.gps"
+44-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:19-63
+45        android:required="false" />
+45-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:64-88
+46    <uses-feature
+46-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:5-90
+47        android:name="android.hardware.fingerprint"
+47-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:19-62
+48        android:required="false" />
+48-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:63-87
+49
+50    <permission
+50-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+51        android:name="com.safezone.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+52        android:protectionLevel="signature" />
+52-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+53
+54    <uses-permission android:name="com.safezone.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+54-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+54-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+55
+56    <application
+56-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:36:5-93:19
+57        android:name="com.safezone.SafeZoneApplication"
+57-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:37:9-44
+58        android:allowBackup="false"
+58-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:38:9-36
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+60        android:dataExtractionRules="@xml/data_extraction_rules"
+60-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:39:9-65
+61        android:debuggable="true"
+62        android:extractNativeLibs="true"
+63        android:fullBackupContent="false"
+63-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:40:9-42
+64        android:icon="@mipmap/ic_launcher"
+64-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:41:9-43
+65        android:label="@string/app_name"
+65-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:42:9-41
+66        android:roundIcon="@mipmap/ic_launcher_round"
+66-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:43:9-54
+67        android:supportsRtl="true"
+67-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:44:9-35
+68        android:theme="@style/Theme.SafeZone" >
+68-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:45:9-46
+69
+70        <!-- ── Main Activity ─────────────────────────────────────────────────── -->
+71        <activity
+71-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:49:9-60:20
+72            android:name="com.safezone.MainActivity"
+72-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:50:13-41
+73            android:exported="true"
+73-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:52:13-36
+74            android:launchMode="singleTop"
+74-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:55:13-43
+75            android:screenOrientation="portrait"
+75-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:53:13-49
+76            android:theme="@style/Theme.SafeZone"
+76-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:51:13-50
+77            android:windowSoftInputMode="adjustResize" >
+77-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:54:13-55
+78            <intent-filter>
+78-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:56:13-59:29
+79                <action android:name="android.intent.action.MAIN" />
+79-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:57:17-69
+79-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:57:25-66
+80
+81                <category android:name="android.intent.category.LAUNCHER" />
+81-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:58:17-77
+81-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:58:27-74
+82            </intent-filter>
+83        </activity>
+84
+85        <!-- ── Foreground Security Service ───────────────────────────────────── -->
+86        <service
+86-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:63:9-68:44
+87            android:name="com.safezone.SecurityService"
+87-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:64:13-44
+88            android:enabled="true"
+88-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:65:13-35
+89            android:exported="false"
+89-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:66:13-37
+90            android:foregroundServiceType="microphone|camera|location"
+90-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:67:13-71
+91            android:stopWithTask="false" />
+91-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:68:13-41
+92
+93        <!-- ── Boot Receiver ──────────────────────────────────────────────────── -->
+94        <receiver
+94-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:71:9-80:20
+95            android:name="com.safezone.receivers.BootReceiver"
+95-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:72:13-51
+96            android:enabled="true"
+96-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:73:13-35
+97            android:exported="true" >
+97-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:74:13-36
+98            <intent-filter android:priority="999" >
+98-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:75:13-79:29
+98-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:75:28-50
+99                <action android:name="android.intent.action.BOOT_COMPLETED" />
+99-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:76:17-79
+99-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:76:25-76
+100                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+100-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:77:17-82
+100-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:77:25-79
+101                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+101-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:78:17-84
+101-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:78:25-81
+102            </intent-filter>
+103        </receiver>
+104
+105        <!-- ── File Provider ──────────────────────────────────────────────────── -->
+106        <provider
+107            android:name="androidx.core.content.FileProvider"
+107-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:84:13-62
+108            android:authorities="com.safezone.debug.fileprovider"
+108-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:85:13-64
+109            android:exported="false"
+109-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:86:13-37
+110            android:grantUriPermissions="true" >
+110-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:87:13-47
+111            <meta-data
+111-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:88:13-90:54
+112                android:name="android.support.FILE_PROVIDER_PATHS"
+112-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:89:17-67
+113                android:resource="@xml/file_paths" />
+113-->C:\project\SafeZone\app\src\main\AndroidManifest.xml:90:17-51
+114        </provider>
+115
+116        <activity
+116-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+117            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+117-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+118            android:exported="false"
+118-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+119            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+119-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+120
+121        <service
+121-->[androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+122            android:name="androidx.room.MultiInstanceInvalidationService"
+122-->[androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+123            android:directBootAware="true"
+123-->[androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+124            android:exported="false" />
+124-->[androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+125
+126        <activity
+126-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+127            android:name="androidx.compose.ui.tooling.PreviewActivity"
+127-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+128            android:exported="true" />
+128-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+129        <activity
+129-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:23:9-25:39
+130            android:name="androidx.activity.ComponentActivity"
+130-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:24:13-63
+131            android:exported="true" />
+131-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:25:13-36
+132
+133        <service
+133-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:24:9-33:19
+134            android:name="androidx.camera.core.impl.MetadataHolderService"
+134-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:25:13-75
+135            android:enabled="false"
+135-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:26:13-36
+136            android:exported="false" >
+136-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:27:13-37
+137            <meta-data
+137-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:30:13-32:89
+138                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+138-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:31:17-103
+139                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+139-->[androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:32:17-86
+140        </service>
+141
+142        <provider
+142-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+143            android:name="androidx.startup.InitializationProvider"
+143-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+144            android:authorities="com.safezone.debug.androidx-startup"
+144-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+145            android:exported="false" >
+145-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+146            <meta-data
+146-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+147                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+147-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+148                android:value="androidx.startup" />
+148-->[androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+149            <meta-data
+149-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:29:13-31:52
+150                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+150-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:30:17-78
+151                android:value="androidx.startup" />
+151-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:31:17-49
+152            <meta-data
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+153                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+154                android:value="androidx.startup" />
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+155        </provider>
+156
+157        <meta-data
+157-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+158            android:name="com.google.android.gms.version"
+158-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+159            android:value="@integer/google_play_services_version" />
+159-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+160
+161        <receiver
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+162            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+163            android:directBootAware="false"
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+164            android:enabled="true"
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+165            android:exported="true"
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+166            android:permission="android.permission.DUMP" >
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+167            <intent-filter>
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+168                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+169            </intent-filter>
+170            <intent-filter>
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+171                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+172            </intent-filter>
+173            <intent-filter>
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+174                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+175            </intent-filter>
+176            <intent-filter>
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+177                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+178            </intent-filter>
+179        </receiver>
+180    </application>
+181
+182</manifest>

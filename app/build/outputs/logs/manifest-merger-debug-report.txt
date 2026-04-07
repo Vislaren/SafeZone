@@ -1,0 +1,724 @@
+-- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:83:9-91:20
+	android:grantUriPermissions
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:87:13-47
+	android:authorities
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:85:13-64
+	android:exported
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:86:13-37
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:84:13-62
+manifest
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:2:1-94:12
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\87dff0885bc91d8e1d020b35b3c5f471\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fd60fe60a7597731d0a4cbbb6f077a21\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f01415ede30f2d2e3af0dd484667ad3b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.biometric:biometric-ktx:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d71b99a2938056107a4944af9cb51e4\transformed\biometric-ktx-1.2.0-alpha05\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4180a046583b6859348bf5721c237dd7\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\352bbfeac076eeb42d991ca40c98f763\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b07a2bc69d39a293ded5c77c3fa3e95\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d4037f26e82984748d4ea2ded45c2d1f\transformed\hilt-android-2.51.1\AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\98a7bff80ecfdee97eb92c64e411d0eb\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c0f6bba9b8ec5fc4273b3b5ed17194bb\transformed\play-services-location-21.3.0\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0020590361a69e695edc7c12edd169ce\transformed\room-ktx-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e3d6e899ba2c646cf131141d1f4c9d4\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.navigation:navigation-common:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c3e1600c22b7d693f9e73d85a3d0551e\transformed\navigation-common-2.8.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\993199b58c31793a9a1d35c413a805f5\transformed\navigation-runtime-2.8.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7444f814e1fff493e9fa5c241bb5b607\transformed\navigation-common-ktx-2.8.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\54d0c8d0c4049e2b00a101ce1bc1b523\transformed\navigation-runtime-ktx-2.8.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38c78832f824c7983b095dfb6041673a\transformed\navigation-compose-2.8.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3-android:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e6e4c697bbbbc9ed63c96d86dae7079\transformed\material3-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4ca00ba419dfc01b82a1d19f03caa2f8\transformed\material-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9d8fb8e06114dbdccda630567f681f09\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e1298d44c304f3f1b6acb909f5080f4\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\099e41e198c924cf5b7f9559210cde25\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\616a1cb47ecc2b098d95cca4150dd830\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3f0c0cb2ea4d5d50828bef342eda41f7\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5545104ddb141fd0bb82855c7befa386\transformed\ui-tooling-data-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c8b96c73a95fcdcee6be67e30026859f\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\05ae96d886be639175af6069332d4768\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0fc57988fcf43c2c1ee4cffd1d44ed88\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e41c8859d547f2cca6b622369dc0af7a\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad1f9487f63f7f51ae3bdb0c6d1a298b\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a5d0736c4fccf0ea9e6963c31bb4b2bc\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3dc3a8096b093061d47adc9383494fe0\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5cb49b170ce40d9b64d27642817a8f43\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d34f608dc9709580f4595ab5581c745\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4e361c57d99c9e69b5d41d6ee7d090e2\transformed\activity-ktx-1.9.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a61fc13323bfba1038dfe79b2cd9e8c1\transformed\activity-compose-1.9.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad22080b835aca6107f738772b9fdbae\transformed\activity-1.9.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.camera:camera-video:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fb99ffc8e7d9d67c124cea27485a84d6\transformed\camera-video-1.3.4\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9b3cdb6eac77e7f68b1be212f925cec\transformed\camera-lifecycle-1.3.4\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ddb6c352bdab538bda9127a0f53330f5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b0797c2fd0d0df54529a51f12ae322cc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\232da471fc8264aa7fde5bf833407781\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\da75de8332373a3db6e40cdabb918183\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\69fcca5a14fb3f6ee111afe758a1a31c\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1f45f64dcbf90ea37c458a9f33a53cff\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d8fd6d4eb7971b7791bc74d6b5ae7f0b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\62a2aa50e3d4ea491f01774ce57370a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ca5bb8a8c0d610c35bf55a7e7fccc7cc\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38843dc791978cf3dc6b3a2cd9097a31\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\bffc39821a66862a311891a0b90d2ec4\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9ff3633e4dc0a296eb6f2626ff758dd\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d9b3975ace759f51aa5a340fe0758d8\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\71c848d34dfaa6d0790159e40d559417\transformed\graphics-path-1.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\47f4988e0c08a8c1b532be15a6bc2b63\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e0553e60e022f3e36bacdd3d81786c67\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ab0aa277ec85f51af2df72a493b91b10\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5dc10e8e6b6a811fdaa1d3127cb399d8\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\76966181ccd49c766084477384866546\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f3b42ec51f1c1c8b7a2ac842069bf0d9\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f80752c1a94a419683627811c3fc06b4\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9efe0df4547bd61ba5aeeb4d2ca6042c\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\696b62d6d55549b0434d4a90c1ef5b89\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d5a5d2b5b866420177b661b7f75717d\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d10432a9130f5da5d1db3d4001f9e8d\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d772f4f2dca1098ad80b4f98a21bbdb\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\16c68320466b86b15c913a75f197a5ba\transformed\lifecycle-service-2.8.6\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\75254b122035a8eef5398b10f74cfa8d\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e1fe5d853ee7cf150a44d37455a8f15a\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\88c3e95d45a4d38b28776a58f4f20b14\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5349c320b21b41ec60f515c391bdb88e\transformed\datastore-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\89538a807bcc060d10c8306b947895d0\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\43fd6f3383a3934bbd304672aab1581d\transformed\datastore-preferences-release\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\49f2c60c36cbeac9949894b8f297453a\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b071fb44c71c6753b4bde4b319fc1297\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d6b5bd8dcef8316b96446a59e24b330b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\699a228b52878188543c1a4ca07018b7\transformed\core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a789d1fb53ecf145597be8d5d3ba2814\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\95c068c76ed1055552bf891e5505d2ff\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4468b87cedd9024a1c4614237cf44214\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\56fdd62ef01e71eeae7d1e58b51ba8cc\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b0c4ccb098179b890edc7604a99aa30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\83270af276149f80f7affc860d2549f3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f656d2093207ffc12a0ea1653e622204\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e8540e3d439fbb43b460c7d8b469407a\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a88a5e32660f02092ef340af8030cc6a\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4fc72d79aac02fb7d4ed22bafe4a4de6\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\168eac0c1b0a7adb60279fad2fa5e7f2\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d0dbaa43a55fb4b41eee5e60ce2dd8bf\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0672961b4612d21695b243b25d8c39e7\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4d6d9f6158cd9b09c6f95574f259fabd\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e92a5e678518736cecf6fbc9329d51d\transformed\dagger-lint-aar-2.51.1\AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:6:5-65
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:6:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:7:22-68
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.SEND_SMS
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:11:5-72
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:11:22-69
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:12:22-72
+uses-permission#android.permission.CALL_PHONE
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:13:5-69
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:13:22-66
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:16:5-77
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:16:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_MICROPHONE
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:17:5-88
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:17:22-85
+uses-permission#android.permission.FOREGROUND_SERVICE_CAMERA
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:18:5-84
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:18:22-81
+uses-permission#android.permission.FOREGROUND_SERVICE_LOCATION
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:19:22-83
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:22:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:23:22-65
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:24:5-95
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:24:22-92
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:25:22-74
+uses-permission#android.permission.INTERNET
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:26:22-64
+uses-permission#android.permission.USE_BIOMETRIC
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:27:5-72
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:22:5-72
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:22:5-72
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:27:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:28:5-74
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:25:5-74
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:25:5-74
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:28:22-71
+uses-feature#android.hardware.camera
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:5-85
+	android:required
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:58-82
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:31:19-57
+uses-feature#android.hardware.microphone
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:5-89
+	android:required
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:62-86
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:32:19-61
+uses-feature#android.hardware.location.gps
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:5-91
+	android:required
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:64-88
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:33:19-63
+uses-feature#android.hardware.fingerprint
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:5-90
+	android:required
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:63-87
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:34:19-62
+application
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:36:5-93:19
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:36:5-93:19
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\87dff0885bc91d8e1d020b35b3c5f471\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\87dff0885bc91d8e1d020b35b3c5f471\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f01415ede30f2d2e3af0dd484667ad3b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f01415ede30f2d2e3af0dd484667ad3b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c0f6bba9b8ec5fc4273b3b5ed17194bb\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c0f6bba9b8ec5fc4273b3b5ed17194bb\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\49f2c60c36cbeac9949894b8f297453a\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\49f2c60c36cbeac9949894b8f297453a\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b0c4ccb098179b890edc7604a99aa30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b0c4ccb098179b890edc7604a99aa30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:44:9-35
+	android:label
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:42:9-41
+	android:fullBackupContent
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:40:9-42
+	android:roundIcon
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:43:9-54
+	tools:targetApi
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:46:9-29
+	android:icon
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:41:9-43
+	android:allowBackup
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:38:9-36
+	android:theme
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:45:9-46
+	android:dataExtractionRules
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:39:9-65
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:37:9-44
+activity#com.safezone.MainActivity
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:49:9-60:20
+	android:screenOrientation
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:53:13-49
+	android:launchMode
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:55:13-43
+	android:windowSoftInputMode
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:54:13-55
+	android:exported
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:52:13-36
+	android:theme
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:51:13-50
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:50:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:56:13-59:29
+action#android.intent.action.MAIN
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:57:17-69
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:57:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:58:17-77
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:58:27-74
+service#com.safezone.SecurityService
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:63:9-68:44
+	android:enabled
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:65:13-35
+	android:exported
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:66:13-37
+	android:stopWithTask
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:68:13-41
+	android:foregroundServiceType
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:67:13-71
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:64:13-44
+receiver#com.safezone.receivers.BootReceiver
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:71:9-80:20
+	android:enabled
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:73:13-35
+	android:exported
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:74:13-36
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:72:13-51
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:75:13-79:29
+	android:priority
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:75:28-50
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:76:17-79
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:76:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:77:17-82
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:77:25-79
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:78:17-84
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:78:25-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:88:13-90:54
+	android:resource
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:90:17-51
+	android:name
+		ADDED from C:\project\SafeZone\app\src\main\AndroidManifest.xml:89:17-67
+uses-sdk
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\87dff0885bc91d8e1d020b35b3c5f471\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\87dff0885bc91d8e1d020b35b3c5f471\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fd60fe60a7597731d0a4cbbb6f077a21\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fd60fe60a7597731d0a4cbbb6f077a21\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f01415ede30f2d2e3af0dd484667ad3b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f01415ede30f2d2e3af0dd484667ad3b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.biometric:biometric-ktx:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d71b99a2938056107a4944af9cb51e4\transformed\biometric-ktx-1.2.0-alpha05\AndroidManifest.xml:5:5-44
+MERGED from [androidx.biometric:biometric-ktx:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d71b99a2938056107a4944af9cb51e4\transformed\biometric-ktx-1.2.0-alpha05\AndroidManifest.xml:5:5-44
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:20:5-44
+MERGED from [androidx.biometric:biometric:1.2.0-alpha05] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e395846440b6560bd860f20fa87fb75\transformed\biometric-1.2.0-alpha05\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4180a046583b6859348bf5721c237dd7\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4180a046583b6859348bf5721c237dd7\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\352bbfeac076eeb42d991ca40c98f763\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\352bbfeac076eeb42d991ca40c98f763\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b07a2bc69d39a293ded5c77c3fa3e95\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b07a2bc69d39a293ded5c77c3fa3e95\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d4037f26e82984748d4ea2ded45c2d1f\transformed\hilt-android-2.51.1\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d4037f26e82984748d4ea2ded45c2d1f\transformed\hilt-android-2.51.1\AndroidManifest.xml:18:3-42
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\98a7bff80ecfdee97eb92c64e411d0eb\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\98a7bff80ecfdee97eb92c64e411d0eb\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c0f6bba9b8ec5fc4273b3b5ed17194bb\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c0f6bba9b8ec5fc4273b3b5ed17194bb\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0020590361a69e695edc7c12edd169ce\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0020590361a69e695edc7c12edd169ce\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e3d6e899ba2c646cf131141d1f4c9d4\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0e3d6e899ba2c646cf131141d1f4c9d4\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c3e1600c22b7d693f9e73d85a3d0551e\transformed\navigation-common-2.8.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c3e1600c22b7d693f9e73d85a3d0551e\transformed\navigation-common-2.8.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\993199b58c31793a9a1d35c413a805f5\transformed\navigation-runtime-2.8.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\993199b58c31793a9a1d35c413a805f5\transformed\navigation-runtime-2.8.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7444f814e1fff493e9fa5c241bb5b607\transformed\navigation-common-ktx-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7444f814e1fff493e9fa5c241bb5b607\transformed\navigation-common-ktx-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\54d0c8d0c4049e2b00a101ce1bc1b523\transformed\navigation-runtime-ktx-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\54d0c8d0c4049e2b00a101ce1bc1b523\transformed\navigation-runtime-ktx-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38c78832f824c7983b095dfb6041673a\transformed\navigation-compose-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.3] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38c78832f824c7983b095dfb6041673a\transformed\navigation-compose-2.8.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e6e4c697bbbbc9ed63c96d86dae7079\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e6e4c697bbbbc9ed63c96d86dae7079\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4ca00ba419dfc01b82a1d19f03caa2f8\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4ca00ba419dfc01b82a1d19f03caa2f8\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9d8fb8e06114dbdccda630567f681f09\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9d8fb8e06114dbdccda630567f681f09\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e1298d44c304f3f1b6acb909f5080f4\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e1298d44c304f3f1b6acb909f5080f4\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\099e41e198c924cf5b7f9559210cde25\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\099e41e198c924cf5b7f9559210cde25\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\616a1cb47ecc2b098d95cca4150dd830\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\616a1cb47ecc2b098d95cca4150dd830\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3f0c0cb2ea4d5d50828bef342eda41f7\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3f0c0cb2ea4d5d50828bef342eda41f7\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5545104ddb141fd0bb82855c7befa386\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5545104ddb141fd0bb82855c7befa386\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c8b96c73a95fcdcee6be67e30026859f\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c8b96c73a95fcdcee6be67e30026859f\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\05ae96d886be639175af6069332d4768\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\05ae96d886be639175af6069332d4768\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0fc57988fcf43c2c1ee4cffd1d44ed88\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0fc57988fcf43c2c1ee4cffd1d44ed88\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e41c8859d547f2cca6b622369dc0af7a\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e41c8859d547f2cca6b622369dc0af7a\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad1f9487f63f7f51ae3bdb0c6d1a298b\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad1f9487f63f7f51ae3bdb0c6d1a298b\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a5d0736c4fccf0ea9e6963c31bb4b2bc\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a5d0736c4fccf0ea9e6963c31bb4b2bc\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3dc3a8096b093061d47adc9383494fe0\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3dc3a8096b093061d47adc9383494fe0\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5cb49b170ce40d9b64d27642817a8f43\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5cb49b170ce40d9b64d27642817a8f43\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d34f608dc9709580f4595ab5581c745\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d34f608dc9709580f4595ab5581c745\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4e361c57d99c9e69b5d41d6ee7d090e2\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4e361c57d99c9e69b5d41d6ee7d090e2\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a61fc13323bfba1038dfe79b2cd9e8c1\transformed\activity-compose-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a61fc13323bfba1038dfe79b2cd9e8c1\transformed\activity-compose-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad22080b835aca6107f738772b9fdbae\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ad22080b835aca6107f738772b9fdbae\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.camera:camera-video:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fb99ffc8e7d9d67c124cea27485a84d6\transformed\camera-video-1.3.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\fb99ffc8e7d9d67c124cea27485a84d6\transformed\camera-video-1.3.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9b3cdb6eac77e7f68b1be212f925cec\transformed\camera-lifecycle-1.3.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9b3cdb6eac77e7f68b1be212f925cec\transformed\camera-lifecycle-1.3.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ddb6c352bdab538bda9127a0f53330f5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ddb6c352bdab538bda9127a0f53330f5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b0797c2fd0d0df54529a51f12ae322cc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b0797c2fd0d0df54529a51f12ae322cc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\232da471fc8264aa7fde5bf833407781\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\232da471fc8264aa7fde5bf833407781\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\da75de8332373a3db6e40cdabb918183\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\da75de8332373a3db6e40cdabb918183\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\69fcca5a14fb3f6ee111afe758a1a31c\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\69fcca5a14fb3f6ee111afe758a1a31c\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1f45f64dcbf90ea37c458a9f33a53cff\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1f45f64dcbf90ea37c458a9f33a53cff\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d8fd6d4eb7971b7791bc74d6b5ae7f0b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d8fd6d4eb7971b7791bc74d6b5ae7f0b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\62a2aa50e3d4ea491f01774ce57370a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\62a2aa50e3d4ea491f01774ce57370a9\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ca5bb8a8c0d610c35bf55a7e7fccc7cc\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ca5bb8a8c0d610c35bf55a7e7fccc7cc\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38843dc791978cf3dc6b3a2cd9097a31\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\38843dc791978cf3dc6b3a2cd9097a31\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\bffc39821a66862a311891a0b90d2ec4\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\bffc39821a66862a311891a0b90d2ec4\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9ff3633e4dc0a296eb6f2626ff758dd\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f9ff3633e4dc0a296eb6f2626ff758dd\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d9b3975ace759f51aa5a340fe0758d8\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\3d9b3975ace759f51aa5a340fe0758d8\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\71c848d34dfaa6d0790159e40d559417\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\71c848d34dfaa6d0790159e40d559417\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\47f4988e0c08a8c1b532be15a6bc2b63\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\47f4988e0c08a8c1b532be15a6bc2b63\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e0553e60e022f3e36bacdd3d81786c67\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e0553e60e022f3e36bacdd3d81786c67\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ab0aa277ec85f51af2df72a493b91b10\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ab0aa277ec85f51af2df72a493b91b10\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5dc10e8e6b6a811fdaa1d3127cb399d8\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5dc10e8e6b6a811fdaa1d3127cb399d8\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\76966181ccd49c766084477384866546\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\76966181ccd49c766084477384866546\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f3b42ec51f1c1c8b7a2ac842069bf0d9\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f3b42ec51f1c1c8b7a2ac842069bf0d9\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f80752c1a94a419683627811c3fc06b4\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f80752c1a94a419683627811c3fc06b4\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9efe0df4547bd61ba5aeeb4d2ca6042c\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9efe0df4547bd61ba5aeeb4d2ca6042c\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\696b62d6d55549b0434d4a90c1ef5b89\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\696b62d6d55549b0434d4a90c1ef5b89\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d5a5d2b5b866420177b661b7f75717d\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d5a5d2b5b866420177b661b7f75717d\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d10432a9130f5da5d1db3d4001f9e8d\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\8d10432a9130f5da5d1db3d4001f9e8d\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d772f4f2dca1098ad80b4f98a21bbdb\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\1d772f4f2dca1098ad80b4f98a21bbdb\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\16c68320466b86b15c913a75f197a5ba\transformed\lifecycle-service-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\16c68320466b86b15c913a75f197a5ba\transformed\lifecycle-service-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\75254b122035a8eef5398b10f74cfa8d\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\75254b122035a8eef5398b10f74cfa8d\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e1fe5d853ee7cf150a44d37455a8f15a\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e1fe5d853ee7cf150a44d37455a8f15a\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\88c3e95d45a4d38b28776a58f4f20b14\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\88c3e95d45a4d38b28776a58f4f20b14\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5349c320b21b41ec60f515c391bdb88e\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\5349c320b21b41ec60f515c391bdb88e\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\89538a807bcc060d10c8306b947895d0\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\89538a807bcc060d10c8306b947895d0\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\43fd6f3383a3934bbd304672aab1581d\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\43fd6f3383a3934bbd304672aab1581d\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\49f2c60c36cbeac9949894b8f297453a\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\49f2c60c36cbeac9949894b8f297453a\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b071fb44c71c6753b4bde4b319fc1297\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b071fb44c71c6753b4bde4b319fc1297\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d6b5bd8dcef8316b96446a59e24b330b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d6b5bd8dcef8316b96446a59e24b330b\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\699a228b52878188543c1a4ca07018b7\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\699a228b52878188543c1a4ca07018b7\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a789d1fb53ecf145597be8d5d3ba2814\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a789d1fb53ecf145597be8d5d3ba2814\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\95c068c76ed1055552bf891e5505d2ff\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\95c068c76ed1055552bf891e5505d2ff\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4468b87cedd9024a1c4614237cf44214\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4468b87cedd9024a1c4614237cf44214\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\56fdd62ef01e71eeae7d1e58b51ba8cc\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\56fdd62ef01e71eeae7d1e58b51ba8cc\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b0c4ccb098179b890edc7604a99aa30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0b0c4ccb098179b890edc7604a99aa30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\83270af276149f80f7affc860d2549f3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\83270af276149f80f7affc860d2549f3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f656d2093207ffc12a0ea1653e622204\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\f656d2093207ffc12a0ea1653e622204\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e8540e3d439fbb43b460c7d8b469407a\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\e8540e3d439fbb43b460c7d8b469407a\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a88a5e32660f02092ef340af8030cc6a\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\a88a5e32660f02092ef340af8030cc6a\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4fc72d79aac02fb7d4ed22bafe4a4de6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4fc72d79aac02fb7d4ed22bafe4a4de6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\168eac0c1b0a7adb60279fad2fa5e7f2\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\168eac0c1b0a7adb60279fad2fa5e7f2\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d0dbaa43a55fb4b41eee5e60ce2dd8bf\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d0dbaa43a55fb4b41eee5e60ce2dd8bf\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0672961b4612d21695b243b25d8c39e7\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\0672961b4612d21695b243b25d8c39e7\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4d6d9f6158cd9b09c6f95574f259fabd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4d6d9f6158cd9b09c6f95574f259fabd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e92a5e678518736cecf6fbc9329d51d\transformed\dagger-lint-aar-2.51.1\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6e92a5e678518736cecf6fbc9329d51d\transformed\dagger-lint-aar-2.51.1\AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\project\SafeZone\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\4aa746c4c1a9d3b6713ef3fc5fec8ae3\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\6b88017c5a9e995231fe21a2bd975920\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ef7ad7019861cd081b27d5c86b40d573\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\719aad917256136694e35077281149c8\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:24:13-63
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\b976f615ff793f9149b83f63dadfc245\transformed\camera-core-1.3.4\AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.4] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\ffcf7313d7d2cebefd5faa74bea2cf0b\transformed\camera-camera2-1.3.4\AndroidManifest.xml:31:17-103
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\aa00102e8b66b6bf537b4c76ca17e956\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\9316afd955bd5b08825d10fc5af41ecb\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+permission#com.safezone.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+uses-permission#com.safezone.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\c6e5ffd8dddde57b2e983a095bbefd2d\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\7d513f4a95a455190a4aa5e3b1a29425\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:30:17-78
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\2640cb4fa65839ffc4378f87badbafc5\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\TENENG COURAGE\.gradle\caches\9.4.1\transforms\d569e17ac97b911791b8cab11efc189b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

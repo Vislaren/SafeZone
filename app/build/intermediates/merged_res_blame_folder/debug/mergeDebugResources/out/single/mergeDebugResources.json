@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/drawable_ic_notification.png.flat",
+        "source": "com.safezone.app-main-88:/drawable/ic_notification.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/drawable_ic_notification_large.png.flat",
+        "source": "com.safezone.app-main-88:/drawable/ic_notification_large.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.safezone.app-main-88:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/xml_data_extraction_rules.xml.flat",
+        "source": "com.safezone.app-main-88:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/xml_file_paths.xml.flat",
+        "source": "com.safezone.app-main-88:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.safezone.app-main-88:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.safezone.app-debug-86:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.safezone.app-main-88:/mipmap-xxxhdpi/ic_launcher_round.png"
+    }
+]

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafeZone</string>
+    <string name="service_notification_title">SAFEZONE</string>
+    <string name="service_notification_text">SYSTEM ARMED — Monitoring Active</string>
+</resources>
