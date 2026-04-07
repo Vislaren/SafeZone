@@ -124,28 +124,17 @@ class MainViewModel @Inject constructor(
     }
 
     fun initiateLink() {
-    val digits = _authState.value.phoneNumber
+    val phone = _authState.value.phoneNumber
 
-    // ── Cameroonian number validation ──────────────────────────────────────
-    // Rules: exactly 9 digits, must start with 6 (all mobile operators)
-    // Operators: 650–659 (MTN), 670–679 (Orange), 690–699 (Camtel)
-    val validationError = when {
-        digits.length != 9              -> "Enter a 9-digit Cameroon mobile number"
-        !digits.startsWith("6")         -> "Number must start with 6 (e.g. 6XX XXX XXX)"
-        digits[1] !in "5679".toList()   -> "Unrecognised operator prefix — use MTN (65X), Orange (69X) or Nextel (66X)"
-        else                            -> null
-    }
-
-    if (validationError != null) {
-        _authState.update { it.copy(errorMessage = validationError) }
+    if (phone.isBlank()) {
+        _authState.update { it.copy(errorMessage = "Please enter a phone number") }
         return
     }
 
-    val fullNumber = "+237$digits"          // E.164 format for SmsManager
     _authState.update { it.copy(isLoading = true, currentStep = AuthStep.OTP) }
 
     viewModelScope.launch {
-        sessionManager.setPhoneNumber(fullNumber)   // Store full E.164 number
+        sessionManager.setPhoneNumber(phone)
         _authState.update { it.copy(isLoading = false) }
     }
 }
