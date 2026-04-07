@@ -141,19 +141,43 @@ class SecurityService : LifecycleService(), SensorEventListener {
 
     // ─── Foreground Notification ───────────────────────────────────────────────
     private fun promoteToForeground() {
-        val notif = buildServiceNotification("SYSTEM ARMED — Monitoring Active")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(
-                SERVICE_NOTIF_ID,
-                notif,
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE or
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA or
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
-            )
-        } else {
+    val notif = buildServiceNotification("SYSTEM ARMED — Monitoring Active")
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        // Build the foreground service type flags only for permissions
+        // that are actually granted right now — avoids SecurityException on API 34+
+        var serviceType = 0
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+            == PackageManager.PERMISSION_GRANTED) {
+            serviceType = serviceType or ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE
+        }
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+            == PackageManager.PERMISSION_GRANTED) {
+            serviceType = serviceType or ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA
+        }
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED) {
+            serviceType = serviceType or ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
+        }
+
+        try {
+            if (serviceType != 0) {
+                startForeground(SERVICE_NOTIF_ID, notif, serviceType)
+            } else {
+                // No typed permissions granted yet — start without a type
+                startForeground(SERVICE_NOTIF_ID, notif)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "startForeground failed: ${e.message} — falling back")
             startForeground(SERVICE_NOTIF_ID, notif)
         }
+    } else {
+        startForeground(SERVICE_NOTIF_ID, notif)
     }
+}
 
     private fun buildServiceNotification(status: String): Notification {
         val pendingIntent = PendingIntent.getActivity(

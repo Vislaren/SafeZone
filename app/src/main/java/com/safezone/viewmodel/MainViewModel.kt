@@ -69,7 +69,10 @@ class MainViewModel @Inject constructor(
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
     private val _authState = MutableStateFlow(AuthState())
-    val authState: StateFlow<AuthState> = _authState.asStateFlow()
+val authState: StateFlow<AuthState> = _authState.asStateFlow()
+
+// Holds the generated OTP for verification — never exposed to UI
+private var _pendingOtp: String = ""
 
     // ── Contacts ──────────────────────────────────────────────────────────────
     val contacts: StateFlow<List<Contact>> = contactRepository.observeContacts()
@@ -124,35 +127,73 @@ class MainViewModel @Inject constructor(
     }
 
     fun initiateLink() {
-    val phone = _authState.value.phoneNumber
+    val phone = _authState.value.phoneNumber.trim()
 
     if (phone.isBlank()) {
         _authState.update { it.copy(errorMessage = "Please enter a phone number") }
         return
     }
 
-    _authState.update { it.copy(isLoading = true, currentStep = AuthStep.OTP) }
+    // Generate a 6-digit OTP and send it via SMS
+    _pendingOtp = (100000..999999).random().toString()
+
+    _authState.update { it.copy(isLoading = true) }
 
     viewModelScope.launch {
         sessionManager.setPhoneNumber(phone)
-        _authState.update { it.copy(isLoading = false) }
+
+        val sent = sendOtpSms(phone, _pendingOtp)
+        if (sent) {
+            _authState.update { it.copy(isLoading = false, currentStep = AuthStep.OTP) }
+        } else {
+            _authState.update {
+                it.copy(
+                    isLoading    = false,
+                    errorMessage = "Failed to send SMS. Check the number and try again."
+                )
+            }
+        }
+    }
+}
+
+@Suppress("DEPRECATION")
+private fun sendOtpSms(phone: String, otp: String): Boolean {
+    return try {
+        val message = "Your SafeZone verification code is: $otp"
+        val smsManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            ctx.getSystemService(android.telephony.SmsManager::class.java)
+        } else {
+            android.telephony.SmsManager.getDefault()
+        }
+        smsManager.sendTextMessage(phone, null, message, null, null)
+        true
+    } catch (e: Exception) {
+        android.util.Log.e("SafeZone::OTP", "SMS send failed: ${e.message}")
+        false
     }
 }
 
     fun verifyOtp() {
-    val code = _authState.value.otpCode
+    val code = _authState.value.otpCode.trim()
+
     if (code.length < 6) {
         _authState.update { it.copy(errorMessage = "Enter the full 6-digit code") }
         return
     }
-        _authState.update { it.copy(isLoading = true) }
-        viewModelScope.launch {
-            // Simulate OTP validation (in production: verify against server)
-            val token = UUID.randomUUID().toString()
-            sessionManager.setSessionToken(token)
-            _authState.update { it.copy(isLoading = false, currentStep = AuthStep.BIOMETRIC) }
-        }
+
+    if (code != _pendingOtp) {
+        _authState.update { it.copy(errorMessage = "Incorrect code. Please try again.") }
+        return
     }
+
+    _authState.update { it.copy(isLoading = true) }
+    viewModelScope.launch {
+        val token = UUID.randomUUID().toString()
+        sessionManager.setSessionToken(token)
+        _pendingOtp = "" // Clear OTP after successful use
+        _authState.update { it.copy(isLoading = false, currentStep = AuthStep.BIOMETRIC) }
+    }
+}
 
     fun completeBiometric() {
         viewModelScope.launch {
