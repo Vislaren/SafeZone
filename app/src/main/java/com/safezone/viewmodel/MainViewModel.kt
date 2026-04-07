@@ -113,33 +113,49 @@ class MainViewModel @Inject constructor(
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0.45f)
 
     // ─── Auth Actions ─────────────────────────────────────────────────────────
-    fun onPhoneNumberChange(phone: String) {
-        _authState.update { it.copy(phoneNumber = phone, errorMessage = null) }
-    }
+    fun onPhoneNumberChange(raw: String) {
+    // Strip everything except digits
+    val digits = raw.filter { it.isDigit() }.take(9)
+    _authState.update { it.copy(phoneNumber = digits, errorMessage = null) }
+}
 
     fun onOtpChange(otp: String) {
         _authState.update { it.copy(otpCode = otp, errorMessage = null) }
     }
 
     fun initiateLink() {
-        val phone = _authState.value.phoneNumber
-        if (phone.length < 7) {
-            _authState.update { it.copy(errorMessage = "Invalid phone number") }
-            return
-        }
-        _authState.update { it.copy(isLoading = true, currentStep = AuthStep.OTP) }
-        viewModelScope.launch {
-            sessionManager.setPhoneNumber(phone)
-            _authState.update { it.copy(isLoading = false) }
-        }
+    val digits = _authState.value.phoneNumber
+
+    // ── Cameroonian number validation ──────────────────────────────────────
+    // Rules: exactly 9 digits, must start with 6 (all mobile operators)
+    // Operators: 650–659 (MTN), 670–679 (Orange), 690–699 (Camtel)
+    val validationError = when {
+        digits.length != 9              -> "Enter a 9-digit Cameroon mobile number"
+        !digits.startsWith("6")         -> "Number must start with 6 (e.g. 6XX XXX XXX)"
+        digits[1] !in "5679".toList()   -> "Unrecognised operator prefix — use MTN (65X), Orange (69X) or Nextel (66X)"
+        else                            -> null
     }
 
+    if (validationError != null) {
+        _authState.update { it.copy(errorMessage = validationError) }
+        return
+    }
+
+    val fullNumber = "+237$digits"          // E.164 format for SmsManager
+    _authState.update { it.copy(isLoading = true, currentStep = AuthStep.OTP) }
+
+    viewModelScope.launch {
+        sessionManager.setPhoneNumber(fullNumber)   // Store full E.164 number
+        _authState.update { it.copy(isLoading = false) }
+    }
+}
+
     fun verifyOtp() {
-        val code = _authState.value.otpCode
-        if (code.length < 4) {
-            _authState.update { it.copy(errorMessage = "Enter the full 6-digit code") }
-            return
-        }
+    val code = _authState.value.otpCode
+    if (code.length < 6) {
+        _authState.update { it.copy(errorMessage = "Enter the full 6-digit code") }
+        return
+    }
         _authState.update { it.copy(isLoading = true) }
         viewModelScope.launch {
             // Simulate OTP validation (in production: verify against server)

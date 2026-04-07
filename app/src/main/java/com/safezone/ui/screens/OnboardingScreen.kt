@@ -168,10 +168,10 @@ private fun PhoneInputSection(
         }
         Spacer(Modifier.height(8.dp))
         Text(
-            "Secure communication requires a verified cellular endpoint.",
-            color    = SafeZoneColors.TextSecondary,
-            fontSize = 14.sp
-        )
+    "Enter your 9-digit Cameroon mobile number (MTN, Orange or Camtel).",
+    color    = SafeZoneColors.TextSecondary,
+    fontSize = 14.sp
+)
         Spacer(Modifier.height(24.dp))
 
         // Phone Input Field
@@ -180,11 +180,11 @@ private fun PhoneInputSection(
             onValueChange = onPhoneChange,
             modifier      = Modifier.fillMaxWidth(),
             placeholder   = { Text("|", color = SafeZoneColors.TextDim) },
-            prefix        = {
-                Text("+1  ", color = SafeZoneColors.OrangeCore, fontWeight = FontWeight.SemiBold)
-            },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
-            singleLine    = true,
+            prefix = {
+    Text("+237 ", color = SafeZoneColors.OrangeCore, fontWeight = FontWeight.SemiBold)
+},
+keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
+singleLine    = true,
             colors        = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor   = SafeZoneColors.OrangeCore,
                 unfocusedBorderColor = SafeZoneColors.Divider,
