@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafeZone</string>
+    <string name="app_tagline">TACTICAL SECURITY</string>
+
+    <!-- Notification channels -->
+    <string name="channel_sos_name">SOS Alerts</string>
+    <string name="channel_sos_desc">High-priority emergency alerts</string>
+    <string name="channel_listening_name">Background Listening</string>
+    <string name="channel_listening_desc">Security phrase monitoring</string>
+    <string name="channel_sos_active_name">Active SOS</string>
+    <string name="channel_sos_active_desc">Shown while SOS is active</string>
+    <string name="channel_ble_name">Offline Mesh</string>
+    <string name="channel_ble_desc">Bluetooth fallback service</string>
+
+    <!-- Notification content -->
+    <string name="notif_sos_active_title">SOS ACTIVE</string>
+    <string name="notif_sos_active_text">Sharing location with your emergency contacts</string>
+    <string name="notif_listening_title">SafeZone is listening</string>
+    <string name="notif_listening_text">Security phrases are being monitored</string>
+    <string name="notif_ble_title">SafeZone offline mesh active</string>
+    <string name="notif_ble_text">Broadcasting to nearby SafeZone users</string>
+</resources>

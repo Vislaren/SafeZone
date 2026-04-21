@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "865227719320",
+    "project_id": "safezone-e3c3d",
+    "storage_bucket": "safezone-e3c3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865227719320:android:7fb347d5425ff5102886ed",
+        "android_client_info": {
+          "package_name": "com.safezone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiYzIK3S15HItKpIVR11_tex5eUL57wkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865227719320:android:6c8c304c15972a992886ed",
+        "android_client_info": {
+          "package_name": "com.safezone.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiYzIK3S15HItKpIVR11_tex5eUL57wkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

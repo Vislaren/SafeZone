@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_red">#FF6B6B</color>
+    <color name="brand_red_deep">#FF3B30</color>
+    <color name="brand_red_soft">#FFB4B4</color>
+    <color name="bg_base">#0A0A0F</color>
+    <color name="bg_elevated">#15151C</color>
+    <color name="bg_card">#1C1C24</color>
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#A8A8B3</color>
+    <color name="accent_blue">#6BA4FF</color>
+    <color name="accent_safe">#4ADE80</color>
+</resources>
