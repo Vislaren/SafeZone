@@ -1,6 +1,7 @@
 package com.safezone.app.ui.viewmodels
 
 import android.content.Context
+import android.media.MediaPlayer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.safezone.app.data.local.preferences.SafeZonePrefs
@@ -174,10 +175,14 @@ data class PhraseSetupUiState(
 @HiltViewModel
 class PhraseSetupViewModel @Inject constructor(
     private val auth: AuthRepository,
-    private val phraseRepo: PhraseRepository
+    private val phraseRepo: PhraseRepository,
+    private val recorder: com.safezone.app.utils.ChunkedAudioRecorder
 ) : ViewModel() {
     private val _state = MutableStateFlow(PhraseSetupUiState())
     val state: StateFlow<PhraseSetupUiState> = _state.asStateFlow()
+
+    private var currentRecordingId: String? = null
+    private var recordingStartedAtMs: Long = 0
 
     init {
         viewModelScope.launch {
@@ -190,12 +195,51 @@ class PhraseSetupViewModel @Inject constructor(
 
     fun onTextChange(v: String) { _state.value = _state.value.copy(text = v) }
     fun onAction(a: PhraseAction) { _state.value = _state.value.copy(action = a) }
-    fun onRecordingStart() { _state.value = _state.value.copy(recording = true) }
-    fun onRecordingStop(path: String, seconds: Int) {
-        _state.value = _state.value.copy(recording = false, recordedFilePath = path, recordedSeconds = seconds)
+    fun startRecording(context: android.content.Context) {
+        if (_state.value.recording) return
+        try {
+            val id = java.util.UUID.randomUUID().toString()
+            currentRecordingId = id
+            recordingStartedAtMs = System.currentTimeMillis()
+            recorder.startChunk(context, id, 0)
+            _state.value = _state.value.copy(recording = true)
+        } catch (ex: Exception) {
+            _state.value = _state.value.copy(error = "Record start failed: ${ex.message}")
+        }
+    }
+
+    fun stopRecording() {
+        if (!_state.value.recording) return
+        try {
+            val f = recorder.stopChunk()
+            val secs = if (recordingStartedAtMs > 0) ((System.currentTimeMillis() - recordingStartedAtMs) / 1000).toInt() else 0
+            _state.value = _state.value.copy(
+                recording = false,
+                recordedFilePath = f?.absolutePath,
+                recordedSeconds = secs
+            )
+        } catch (ex: Exception) {
+            _state.value = _state.value.copy(recording = false, error = "Record stop failed: ${ex.message}")
+        } finally {
+            currentRecordingId = null
+            recordingStartedAtMs = 0
+        }
     }
     fun clearRecording() {
         _state.value = _state.value.copy(recordedFilePath = null, recordedSeconds = 0)
+    }
+
+    fun playRecording(context: Context) = viewModelScope.launch {
+        val path = _state.value.recordedFilePath ?: return@launch
+        try {
+            val mp = MediaPlayer()
+            mp.setDataSource(path)
+            mp.prepare()
+            mp.start()
+            mp.setOnCompletionListener { it.release() }
+        } catch (ex: Exception) {
+            _state.value = _state.value.copy(error = "Playback failed: ${ex.message}")
+        }
     }
 
     fun save() = viewModelScope.launch {

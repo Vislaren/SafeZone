@@ -22,7 +22,13 @@ import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.PersonOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -64,7 +70,21 @@ fun ProfileSetupScreen(
             color = SafeZoneColors.TextSecondary, fontSize = 14.sp)
         Spacer(Modifier.height(32.dp))
 
-        // Avatar picker (TODO: wire to file picker + vm.uploadAvatar)
+        // Avatar picker
+        val ctx = LocalContext.current
+        val scope = rememberCoroutineScope()
+        val launcher = rememberLauncherForActivityResult(
+            contract = ActivityResultContracts.GetContent(),
+            onResult = { uri: Uri? ->
+                if (uri != null) {
+                    scope.launch {
+                        val bytes = ctx.contentResolver.openInputStream(uri)?.use { it.readBytes() }
+                        if (bytes != null) vm.uploadAvatar(bytes)
+                    }
+                }
+            }
+        )
+
         Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Box(
@@ -73,7 +93,7 @@ fun ProfileSetupScreen(
                         .clip(CircleShape)
                         .background(Brush.radialGradient(
                             listOf(SafeZoneColors.BrandRedGlow, SafeZoneColors.BgCard)))
-                        .clickable { /* TODO open image picker */ },
+                        .clickable { launcher.launch("image/*") },
                     contentAlignment = Alignment.Center
                 ) {
                     if (s.photoUrl != null) {

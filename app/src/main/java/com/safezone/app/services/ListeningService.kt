@@ -26,6 +26,7 @@ import com.safezone.app.domain.repository.PhraseRepository
 import com.safezone.app.utils.PhraseMatcher
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -57,12 +58,18 @@ class ListeningService : LifecycleService() {
 
     private suspend fun bootstrap() {
         val userId = authRepo.currentUserId.firstOrNull() ?: run { stopSelf(); return }
-        targetPhrases = phraseRepo.observePhrases(userId).firstOrNull()
-            ?.filter { it.enabled }
-            ?.map { it.text to it.action }
-            ?: emptyList()
-        if (targetPhrases.isEmpty()) { stopSelf(); return }
-        startListening()
+        phraseRepo.observePhrases(userId).collectLatest { list ->
+            val enabled = list.filter { it.enabled }
+            targetPhrases = enabled.map { it.text to it.action }
+            if (targetPhrases.isEmpty()) {
+                // No configured phrases: stop recognizer if running and wait for updates
+                runCatching { recognizer?.stopListening(); recognizer?.destroy() }
+                recognizer = null
+            } else {
+                // Start recognizer if not already active
+                if (recognizer == null) startListening()
+            }
+        }
     }
 
     private fun startListening() {

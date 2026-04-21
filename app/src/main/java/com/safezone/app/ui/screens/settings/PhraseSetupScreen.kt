@@ -7,6 +7,8 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,6 +33,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -128,6 +131,7 @@ fun PhraseSetupScreen(
                     animationSpec = infiniteRepeatable(tween(800), RepeatMode.Reverse),
                     label = "scale"
                 )
+                val ctx = LocalContext.current
                 Box(
                     modifier = Modifier
                         .size(140.dp)
@@ -138,9 +142,15 @@ fun PhraseSetupScreen(
                                 SafeZoneColors.BrandRedSoft, SafeZoneColors.BrandRed, SafeZoneColors.BrandRedDeep
                             ))
                         )
-                        .clickable {
-                            // TODO: wire to ChunkedAudioRecorder once a hold/release gesture is added
-                            if (s.recording) vm.onRecordingStop("(stub)", 3) else vm.onRecordingStart()
+                        .pointerInput(Unit) {
+                            detectTapGestures(onPress = {
+                                vm.startRecording(ctx)
+                                try {
+                                    awaitRelease()
+                                } finally {
+                                    vm.stopRecording()
+                                }
+                            })
                         },
                     contentAlignment = Alignment.Center
                 ) {
@@ -169,11 +179,13 @@ fun PhraseSetupScreen(
                         .padding(10.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
+                    val ctx = LocalContext.current
                     Box(
                         modifier = Modifier.size(40.dp).clip(CircleShape).background(SafeZoneColors.BgCard),
                         contentAlignment = Alignment.Center
                     ) {
-                        Icon(Icons.Filled.PlayArrow, null, tint = SafeZoneColors.TextPrimary)
+                        Icon(Icons.Filled.PlayArrow, null, tint = SafeZoneColors.TextPrimary,
+                            modifier = Modifier.clickable { vm.playRecording(ctx) })
                     }
                     Spacer(Modifier.size(12.dp))
                     Column(Modifier.weight(1f)) {
