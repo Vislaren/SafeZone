@@ -75,3 +75,4 @@ proguard/*.txt
 # Misc
 # ─────────────────────────────────────────────────────────────
 captures/
+gradle/gradle-daemon-jvm.properties
