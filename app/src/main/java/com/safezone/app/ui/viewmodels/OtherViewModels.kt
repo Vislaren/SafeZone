@@ -26,6 +26,7 @@ import com.safezone.app.services.BLEService
 import com.safezone.app.services.ListeningService
 import com.safezone.app.services.SOSService
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -169,6 +170,7 @@ data class PhraseSetupUiState(
     val text: String = "",
     val action: PhraseAction = PhraseAction.FULL_SOS,
     val recording: Boolean = false,
+    val preparingMic: Boolean = false,   // true while we're stopping ListeningService before recording
     val recordedFilePath: String? = null,
     val recordedSeconds: Int = 0,
     val phrases: List<SecurityPhrase> = emptyList(),
@@ -180,13 +182,17 @@ data class PhraseSetupUiState(
 class PhraseSetupViewModel @Inject constructor(
     private val auth: AuthRepository,
     private val phraseRepo: PhraseRepository,
-    private val recorder: com.safezone.app.utils.ChunkedAudioRecorder
+    private val recorder: com.safezone.app.utils.ChunkedAudioRecorder,
+    // FIX Bug 1: inject prefs so we know whether to restart ListeningService after recording
+    private val prefs: SafeZonePrefs
 ) : ViewModel() {
     private val _state = MutableStateFlow(PhraseSetupUiState())
     val state: StateFlow<PhraseSetupUiState> = _state.asStateFlow()
 
     private var currentRecordingId: String? = null
     private var recordingStartedAtMs: Long = 0
+    // FIX Bug 1: remember whether the listening service was running so we can restore it
+    private var wasListening = false
 
     init {
         viewModelScope.launch {
@@ -197,38 +203,82 @@ class PhraseSetupViewModel @Inject constructor(
         }
     }
 
-    fun onTextChange(v: String) { _state.value = _state.value.copy(text = v) }
+    fun onTextChange(v: String) { _state.value = _state.value.copy(text = v, error = null) }
     fun onAction(a: PhraseAction) { _state.value = _state.value.copy(action = a) }
-    fun startRecording(context: android.content.Context) {
-        if (_state.value.recording) return
-        try {
-            val id = java.util.UUID.randomUUID().toString()
-            currentRecordingId = id
-            recordingStartedAtMs = System.currentTimeMillis()
-            recorder.startChunk(context, id, 0)
-            _state.value = _state.value.copy(recording = true)
-        } catch (ex: Exception) {
-            _state.value = _state.value.copy(error = "Record start failed: ${ex.message}")
+
+    fun startRecording(context: Context) {
+        if (_state.value.recording || _state.value.preparingMic) return
+        viewModelScope.launch {
+            // FIX Bug 1: SpeechRecognizer (ListeningService) and MediaRecorder both need the
+            // microphone exclusively. Stop the service first, wait for the OS to release the
+            // audio session, then start recording — otherwise setAudioSource() fails immediately.
+            wasListening = prefs.listeningEnabled.firstOrNull() == true
+            if (wasListening) {
+                _state.value = _state.value.copy(preparingMic = true, error = null)
+                ListeningService.stop(context)
+                delay(500L) // give the OS time to release the audio focus
+            }
+
+            try {
+                val id = UUID.randomUUID().toString()
+                currentRecordingId = id
+                recordingStartedAtMs = System.currentTimeMillis()
+                recorder.startChunk(context, id, 0)
+                _state.value = _state.value.copy(recording = true, preparingMic = false, error = null)
+            } catch (ex: Exception) {
+                _state.value = _state.value.copy(
+                    recording = false,
+                    preparingMic = false,
+                    error = "Microphone unavailable: ${ex.message}"
+                )
+                // Restore listening service if we stopped it but recording still failed
+                if (wasListening) ListeningService.start(context)
+                wasListening = false
+            }
         }
     }
 
-    fun stopRecording() {
-        if (!_state.value.recording) return
-        try {
-            val f = recorder.stopChunk()
-            val secs = if (recordingStartedAtMs > 0) ((System.currentTimeMillis() - recordingStartedAtMs) / 1000).toInt() else 0
-            _state.value = _state.value.copy(
-                recording = false,
-                recordedFilePath = f?.absolutePath,
-                recordedSeconds = secs
-            )
-        } catch (ex: Exception) {
-            _state.value = _state.value.copy(recording = false, error = "Record stop failed: ${ex.message}")
-        } finally {
-            currentRecordingId = null
-            recordingStartedAtMs = 0
+    fun stopRecording(context: Context) {
+        // FIX Bug 1: stopRecording now accepts context so it can restart ListeningService.
+        // It runs in a coroutine to handle the case where startRecording's delay is still
+        // in-flight (preparingMic == true) — we wait briefly before giving up.
+        viewModelScope.launch {
+            // If the mic was still being prepared when the user released, wait for it.
+            var waited = 0
+            while (_state.value.preparingMic && waited < 2_000) {
+                delay(50); waited += 50
+            }
+
+            if (!_state.value.recording) {
+                // Recording never actually started — nothing to stop, but still restore service.
+                if (wasListening) { ListeningService.start(context); wasListening = false }
+                return@launch
+            }
+
+            try {
+                val f = recorder.stopChunk()
+                val secs = if (recordingStartedAtMs > 0)
+                    ((System.currentTimeMillis() - recordingStartedAtMs) / 1000).toInt() else 0
+                _state.value = _state.value.copy(
+                    recording = false,
+                    recordedFilePath = f?.absolutePath,
+                    recordedSeconds = secs
+                )
+            } catch (ex: Exception) {
+                _state.value = _state.value.copy(
+                    recording = false,
+                    error = "Record stop failed: ${ex.message}"
+                )
+            } finally {
+                currentRecordingId = null
+                recordingStartedAtMs = 0
+                // FIX Bug 1: restore the listening service now that the mic is free
+                if (wasListening) ListeningService.start(context)
+                wasListening = false
+            }
         }
     }
+
     fun clearRecording() {
         _state.value = _state.value.copy(recordedFilePath = null, recordedSeconds = 0)
     }
@@ -248,8 +298,20 @@ class PhraseSetupViewModel @Inject constructor(
 
     fun save() = viewModelScope.launch {
         val s = _state.value
-        if (s.text.isBlank()) { _state.value = s.copy(error = "Phrase required"); return@launch }
-        val uid = auth.currentUserId.firstOrNull() ?: return@launch
+        if (s.text.isBlank()) {
+            _state.value = s.copy(error = "Phrase text is required")
+            return@launch
+        }
+
+        // FIX Bug 2: previously this returned silently with no error message if the user
+        // wasn't signed in yet. The form would clear, the phrase was never saved, and there
+        // was no feedback — so the phrase appeared to vanish.
+        val uid = auth.currentUserId.firstOrNull()
+        if (uid == null) {
+            _state.value = s.copy(error = "Not signed in — please restart the app and try again")
+            return@launch
+        }
+
         _state.value = s.copy(saving = true, error = null)
         val phrase = SecurityPhrase(
             id = UUID.randomUUID().toString(),
@@ -261,11 +323,18 @@ class PhraseSetupViewModel @Inject constructor(
         when (val r = phraseRepo.savePhrase(phrase)) {
             is AppResult.Success -> {
                 _state.value = _state.value.copy(
-                    saving = false, text = "", recordedFilePath = null, recordedSeconds = 0
+                    saving = false,
+                    text = "",
+                    recordedFilePath = null,
+                    recordedSeconds = 0,
+                    error = null
                 )
             }
-            is AppResult.Error -> _state.value = _state.value.copy(saving = false, error = r.message)
-            else -> Unit
+            is AppResult.Error -> _state.value = _state.value.copy(
+                saving = false,
+                error = r.message ?: "Failed to save phrase — please try again"
+            )
+            else -> _state.value = _state.value.copy(saving = false)
         }
     }
 
@@ -303,7 +372,7 @@ class SosActiveViewModel @Inject constructor(
         // Tick the timer
         viewModelScope.launch {
             while (true) {
-                kotlinx.coroutines.delay(1000)
+                delay(1000)
                 val s = SOSService.state.value
                 if (s.active && s.startedAtMs > 0) {
                     _state.value = _state.value.copy(
@@ -355,7 +424,7 @@ class AlertViewModel @Inject constructor(
                     userName = ev.userName.ifBlank { "Unknown" },
                     avatarUrl = ev.userPhotoUrl,
                     distanceMeters = dist,
-                    etaMinutes = (dist / 80).coerceAtLeast(1.0), // ~80 m/min walking
+                    etaMinutes = (dist / 80).coerceAtLeast(1.0),
                     loading = false
                 )
             } else {

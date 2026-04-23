@@ -30,11 +30,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/**
- * Background wake-word service. Uses Android's on-device SpeechRecognizer as a fallback
- * (which is battery-heavy in continuous mode). For production you should swap
- * [createRecognizer] / [startListening] with Porcupine or Vosk.
- */
 @AndroidEntryPoint
 class ListeningService : LifecycleService() {
 
@@ -43,6 +38,9 @@ class ListeningService : LifecycleService() {
 
     private var recognizer: SpeechRecognizer? = null
     private var targetPhrases: List<Pair<String, PhraseAction>> = emptyList()
+
+    // FIX Bug 3: flag to stop re-starting the recognizer once we're shutting down
+    @Volatile private var destroyed = false
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
@@ -54,37 +52,55 @@ class ListeningService : LifecycleService() {
 
     private fun hasMicPermission(): Boolean =
         ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) ==
-            PackageManager.PERMISSION_GRANTED
+                PackageManager.PERMISSION_GRANTED
 
     private suspend fun bootstrap() {
         val userId = authRepo.currentUserId.firstOrNull() ?: run { stopSelf(); return }
         phraseRepo.observePhrases(userId).collectLatest { list ->
             val enabled = list.filter { it.enabled }
             targetPhrases = enabled.map { it.text to it.action }
+
             if (targetPhrases.isEmpty()) {
-                // No configured phrases: stop recognizer if running and wait for updates
-                runCatching { recognizer?.stopListening(); recognizer?.destroy() }
-                recognizer = null
+                // FIX Bug 4: properly destroy before nulling so the old callbacks are dead
+                destroyRecognizer()
             } else {
-                // Start recognizer if not already active
-                if (recognizer == null) startListening()
+                if (recognizer == null && !destroyed) {
+                    startListening()
+                }
             }
         }
     }
 
+    // FIX Bug 4: centralise destroy so collectLatest re-runs always get a clean slate
+    private fun destroyRecognizer() {
+        runCatching { recognizer?.stopListening(); recognizer?.destroy() }
+        recognizer = null
+    }
+
     private fun startListening() {
+        if (destroyed) return
+
+        // FIX Bug 1: isRecognitionAvailable() only checks for ANY recognizer (including online).
+        // createOnDeviceSpeechRecognizer() then fails silently on most devices because it needs
+        // Android 13+ AND a separately-installed on-device model.
+        // Use the standard factory instead — it resolves to the device's default engine (Google).
         if (!SpeechRecognizer.isRecognitionAvailable(this)) {
-            // Device has no on-device recognizer. Stop quietly; the app should warn the user.
             stopSelf(); return
         }
-        recognizer?.destroy()
-        val r = SpeechRecognizer.createOnDeviceSpeechRecognizer(this)
+
+        destroyRecognizer() // FIX Bug 4: kill any previous instance before creating a new one
+
+        // FIX Bug 1: createSpeechRecognizer() works on all API levels and all devices
+        val r = SpeechRecognizer.createSpeechRecognizer(this)
         recognizer = r
 
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
             putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
+            // FIX Bug 2: required when called from a background/foreground service;
+            // without this many recognizer implementations fire onError(ERROR_CLIENT) immediately.
+            putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, packageName)
         }
 
         r.setRecognitionListener(object : RecognitionListener {
@@ -94,20 +110,30 @@ class ListeningService : LifecycleService() {
             override fun onBufferReceived(buffer: ByteArray?) {}
             override fun onEndOfSpeech() {}
             override fun onPartialResults(partial: Bundle?) = checkResults(partial)
+
             override fun onResults(results: Bundle?) {
                 checkResults(results)
-                // Restart; SpeechRecognizer doesn't loop natively.
-                r.startListening(intent)
+                // FIX Bug 3: don't restart if a phrase was just detected and we called stopSelf(),
+                // or if the service is already being torn down.
+                if (!destroyed && recognizer != null) {
+                    runCatching { r.startListening(intent) }
+                }
             }
+
             override fun onError(error: Int) {
                 // Back off briefly then retry — common in real-world usage.
                 lifecycleScope.launch {
                     kotlinx.coroutines.delay(1500)
-                    runCatching { r.startListening(intent) }
+                    // FIX Bug 3: guard here too so the retry loop stops when we're destroying
+                    if (!destroyed && recognizer != null) {
+                        runCatching { r.startListening(intent) }
+                    }
                 }
             }
+
             override fun onEvent(eventType: Int, params: Bundle?) {}
         })
+
         r.startListening(intent)
     }
 
@@ -119,13 +145,17 @@ class ListeningService : LifecycleService() {
     }
 
     private fun onPhraseDetected(action: PhraseAction) {
-        // All actions currently route into full SOS — tune these for silent variants later.
+        // FIX Bug 3: set destroyed BEFORE stopSelf() so the recognizer callbacks see it
+        // immediately and don't attempt to restart listening.
+        destroyed = true
+        destroyRecognizer()
+
         when (action) {
             PhraseAction.FULL_SOS,
             PhraseAction.NOTIFY_CONTACTS,
             PhraseAction.SILENT_POLICE -> SOSService.start(this, TriggerSource.PHRASE)
         }
-        // Stop listening while SOS is running; the SOSService will own the mic.
+
         stopSelf()
     }
 
@@ -151,8 +181,8 @@ class ListeningService : LifecycleService() {
     }
 
     override fun onDestroy() {
-        runCatching { recognizer?.stopListening(); recognizer?.destroy() }
-        recognizer = null
+        destroyed = true       // FIX Bug 3: ensure all callbacks stop retrying
+        destroyRecognizer()    // FIX Bug 4: use the centralised helper
         super.onDestroy()
     }
 
