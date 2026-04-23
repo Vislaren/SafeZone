@@ -12,7 +12,7 @@ import com.safezone.app.data.local.entity.SosEventEntity
 @Database(
     entities = [SosEventEntity::class, IncomingAlertEntity::class, PendingAudioEntity::class],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class SafeZoneDatabase : RoomDatabase() {
     abstract fun sosEventDao(): SosEventDao

@@ -22,7 +22,7 @@ import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.ContactMail
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Fingerprint
-import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PinDrop
@@ -161,7 +161,7 @@ fun SettingsScreen(
                     .padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(Icons.Filled.Logout, null, tint = SafeZoneColors.BrandRedSoft)
+                Icon(Icons.AutoMirrored.Filled.Logout, null, tint = SafeZoneColors.BrandRedSoft)
                 Spacer(Modifier.size(12.dp))
                 Text("Sign Out",
                     color = SafeZoneColors.BrandRedSoft,

@@ -18,7 +18,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Fingerprint
 import androidx.compose.material.icons.filled.Lock
@@ -214,7 +214,7 @@ fun SignUpScreen(
             text = "Initiate Account",
             onClick = vm::register,
             loading = s.loading,
-            trailing = { Icon(Icons.Filled.ArrowForward, null, tint = SafeZoneColors.BgBase) }
+            trailing = { Icon(Icons.AutoMirrored.Filled.ArrowForward, null, tint = SafeZoneColors.BgBase) }
         )
         Spacer(Modifier.height(24.dp))
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {

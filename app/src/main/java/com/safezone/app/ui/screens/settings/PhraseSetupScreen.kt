@@ -7,6 +7,8 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,15 +24,17 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Save
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -53,6 +57,9 @@ fun PhraseSetupScreen(
     vm: PhraseSetupViewModel = hiltViewModel()
 ) {
     val s by vm.state.collectAsStateWithLifecycle()
+    // FIX Bug 1: ctx must be captured at this level so it's accessible inside
+    // the pointerInput lambda where stopRecording(ctx) is called.
+    val ctx = LocalContext.current
 
     Column(
         modifier = Modifier
@@ -66,7 +73,7 @@ fun PhraseSetupScreen(
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(Icons.Filled.ArrowBack, null,
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, null,
                 tint = SafeZoneColors.TextPrimary,
                 modifier = Modifier.size(28.dp).clickable { onBack() })
             Spacer(Modifier.weight(1f))
@@ -117,7 +124,15 @@ fun PhraseSetupScreen(
                 Text("STATUS",
                     color = SafeZoneColors.AccentBlue,
                     fontSize = 12.sp, letterSpacing = 3.sp, fontWeight = FontWeight.SemiBold)
-                Text(if (s.recording) "Recording…" else "Ready to Record",
+
+                // FIX Bug 1: show a distinct "Preparing mic…" status while the ListeningService
+                // is being stopped and the OS releases the audio session.
+                val statusText = when {
+                    s.preparingMic -> "Preparing mic…"
+                    s.recording    -> "Recording…"
+                    else           -> "Ready to Record"
+                }
+                Text(statusText,
                     color = SafeZoneColors.TextPrimary,
                     fontSize = 22.sp, fontWeight = FontWeight.Bold)
                 Spacer(Modifier.height(24.dp))
@@ -128,6 +143,7 @@ fun PhraseSetupScreen(
                     animationSpec = infiniteRepeatable(tween(800), RepeatMode.Reverse),
                     label = "scale"
                 )
+
                 Box(
                     modifier = Modifier
                         .size(140.dp)
@@ -138,14 +154,32 @@ fun PhraseSetupScreen(
                                 SafeZoneColors.BrandRedSoft, SafeZoneColors.BrandRed, SafeZoneColors.BrandRedDeep
                             ))
                         )
-                        .clickable {
-                            // TODO: wire to ChunkedAudioRecorder once a hold/release gesture is added
-                            if (s.recording) vm.onRecordingStop("(stub)", 3) else vm.onRecordingStart()
+                        .pointerInput(Unit) {
+                            detectTapGestures(onPress = {
+                                vm.startRecording(ctx)
+                                try {
+                                    awaitRelease()
+                                } finally {
+                                    // FIX Bug 1: pass ctx so stopRecording can restart
+                                    // ListeningService after the mic is released.
+                                    vm.stopRecording(ctx)
+                                }
+                            })
                         },
                     contentAlignment = Alignment.Center
                 ) {
-                    Icon(Icons.Filled.Mic, null,
-                        tint = SafeZoneColors.BgBase, modifier = Modifier.size(44.dp))
+                    // FIX Bug 1: show a spinner while the mic is being prepared instead
+                    // of the mic icon, so the user knows something is happening.
+                    if (s.preparingMic) {
+                        CircularProgressIndicator(
+                            color = SafeZoneColors.BgBase,
+                            modifier = Modifier.size(44.dp),
+                            strokeWidth = 3.dp
+                        )
+                    } else {
+                        Icon(Icons.Filled.Mic, null,
+                            tint = SafeZoneColors.BgBase, modifier = Modifier.size(44.dp))
+                    }
                 }
                 Spacer(Modifier.height(20.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(3.dp),
@@ -173,7 +207,8 @@ fun PhraseSetupScreen(
                         modifier = Modifier.size(40.dp).clip(CircleShape).background(SafeZoneColors.BgCard),
                         contentAlignment = Alignment.Center
                     ) {
-                        Icon(Icons.Filled.PlayArrow, null, tint = SafeZoneColors.TextPrimary)
+                        Icon(Icons.Filled.PlayArrow, null, tint = SafeZoneColors.TextPrimary,
+                            modifier = Modifier.clickable { vm.playRecording(ctx) })
                     }
                     Spacer(Modifier.size(12.dp))
                     Column(Modifier.weight(1f)) {

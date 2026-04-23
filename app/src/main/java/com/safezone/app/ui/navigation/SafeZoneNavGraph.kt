@@ -91,7 +91,8 @@ fun SafeZoneNavGraph(initialAlertId: String? = null) {
                 onOpenSettings = { nav.navigate(Route.Settings.path) },
                 onOpenMap = { nav.navigate(Route.Map.path) },
                 onOpenHistory = { nav.navigate(Route.History.path) },
-                onSosActive = { nav.navigate(Route.SosActive.path) }
+                onSosActive = { nav.navigate(Route.SosActive.path) },
+                onOpenProfile = { nav.navigate(Route.ProfileSetup.path) }
             )
         }
         composable(Route.Map.path) {

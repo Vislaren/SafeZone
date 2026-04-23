@@ -15,7 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DirectionsRun
+import androidx.compose.material.icons.automirrored.filled.DirectionsRun
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -150,7 +150,7 @@ fun MapScreen(
                         text = "Respond Now",
                         onClick = { onOpenAlert(alert.eventId); vm.clearFocus() },
                         trailing = {
-                            Icon(Icons.Filled.DirectionsRun, null, tint = SafeZoneColors.BgBase)
+                            Icon(Icons.AutoMirrored.Filled.DirectionsRun, null, tint = SafeZoneColors.BgBase)
                         }
                     )
                 }

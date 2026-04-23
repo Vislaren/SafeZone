@@ -60,6 +60,7 @@ fun HomeScreen(
     onOpenMap: () -> Unit,
     onOpenHistory: () -> Unit,
     onSosActive: () -> Unit,
+    onOpenProfile: () -> Unit,
     vm: HomeViewModel = hiltViewModel()
 ) {
     val s by vm.state.collectAsStateWithLifecycle()
@@ -74,6 +75,7 @@ fun HomeScreen(
     ) {
         SafeZoneTopBar(
             avatarUrl = s.avatarUrl,
+            onAvatarClick = onOpenProfile,
             onSettingsClick = onOpenSettings
         )
         Spacer(Modifier.height(24.dp))
