@@ -18,7 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddAPhoto
-import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.PersonOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -168,7 +168,7 @@ fun ProfileSetupScreen(
             text = "Save & Continue",
             onClick = { vm.save(onSaved) },
             loading = s.saving,
-            trailing = { Icon(Icons.Filled.ArrowForward, null, tint = SafeZoneColors.BgBase) }
+            trailing = { Icon(Icons.AutoMirrored.Filled.ArrowForward, null, tint = SafeZoneColors.BgBase) }
         )
         Spacer(Modifier.height(24.dp))
     }

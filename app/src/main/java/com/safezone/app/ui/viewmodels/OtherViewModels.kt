@@ -56,16 +56,20 @@ class MapViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            location.locationUpdates().collectLatest { p ->
-                _state.value = _state.value.copy(myLocation = p)
-                val r = getNearby(p.lat, p.lng, 500)
-                if (r is AppResult.Success) _state.value = _state.value.copy(nearby = r.data)
+            runCatching {
+                location.locationUpdates().collectLatest { p ->
+                    _state.value = _state.value.copy(myLocation = p)
+                    val r = getNearby(p.lat, p.lng, 500)
+                    if (r is AppResult.Success) _state.value = _state.value.copy(nearby = r.data)
+                }
             }
         }
         viewModelScope.launch {
             val uid = auth.currentUserId.firstOrNull() ?: return@launch
-            alerts.observeIncomingAlerts(uid).collectLatest { a ->
-                _state.value = _state.value.copy(focusedAlert = a)
+            runCatching {
+                alerts.observeIncomingAlerts(uid).collectLatest { a ->
+                    _state.value = _state.value.copy(focusedAlert = a)
+                }
             }
         }
     }

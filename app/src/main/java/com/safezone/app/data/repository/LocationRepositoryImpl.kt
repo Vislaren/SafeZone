@@ -44,7 +44,7 @@ class LocationRepositoryImpl @Inject constructor(
     @SuppressLint("MissingPermission")
     override fun locationUpdates(): Flow<LocationPoint> = callbackFlow {
         if (!hasPermission()) {
-            close(SecurityException("Location permission not granted"))
+            close()
             return@callbackFlow
         }
         val req = LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 10_000L)

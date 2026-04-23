@@ -24,7 +24,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.PlayArrow
@@ -69,7 +69,7 @@ fun PhraseSetupScreen(
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(Icons.Filled.ArrowBack, null,
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, null,
                 tint = SafeZoneColors.TextPrimary,
                 modifier = Modifier.size(28.dp).clickable { onBack() })
             Spacer(Modifier.weight(1f))
